@@ -1,4 +1,4 @@
-from Libro import AgguntaLibro
+from Libro import AggiuntaLibro
 from Libro import PrestitoLibro
 from Libro import RiportaLibro
 from Libro import DispLibro
