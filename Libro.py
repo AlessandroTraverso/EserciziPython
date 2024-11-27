@@ -34,8 +34,8 @@ def RestituzioneLibro(lista,prestati):
         titolo = input()
         for ind in range(len(prestati)):
             if(prestati[ind]==titolo):
-                prestati.remove[titolo]
-                lista.append[titolo]
+                prestati.remove(titolo)
+                lista.append(titolo)
             else:
                 print("Il libro dal titolo " + titolo + " non risulta prestato")
     lista.sort()
