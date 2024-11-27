@@ -14,6 +14,10 @@ def AggiuntaLibro(lista):
 def PrestitoLibro(lista,prestati):
     print("Quanti libri vuoi prendere in prestito?")
     x = int(input())
+    while(x>len(lista)):
+        print("Non puoi prendere ",x," libri in prestito, ce ne sono solo ",len(lista)," nella libreria")
+        print("Reinserisci quanti libri vuoi prendere in prestito")
+        x = int(input())
     for i in range(x):
         print("Inserisci il titolo del libro numero" ,i+1, "che vuoi prendere in prestito")
         titolo = input()
