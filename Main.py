@@ -17,7 +17,11 @@ while(continua=="si"):
         case 1:
             AggiuntaLibro(listalibri)
         case 2:
-            PrestitoLibro(listalibri,libriprestati)
+            if(len(listalibri)==0):
+                print("Non ci sono attualmente libri nella libreria, aggiungi prima dei libri per prenderli in prestito")
+                AggiuntaLibro(listalibri)
+            else:
+                PrestitoLibro(listalibri,libriprestati)
         case 3:
             RestituzioneLibro(listalibri,libriprestati)
         case 4:
@@ -30,5 +34,4 @@ while(continua=="si"):
             print("Azione non prevista")
     print("Vuoi eseguire una nuova azione? Inserisci si o no")
     continua = input()
-
-    
+    continua = continua.lower()
