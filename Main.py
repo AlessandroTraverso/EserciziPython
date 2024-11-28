@@ -11,7 +11,7 @@ libriprestati = []
 continua="si"
 while(continua=="si"):
     print("Scegli quale azione vuoi eseguire:")
-    print("1. Aggiungere libri alla libreria\n2. Prendere in prestito libri\n3. Restituire dei libri\n4. Verificare disponibilità di specifici libri\n5. Verificare libri nella libreria\n6. Verificare libri in prestito")
+    print("1. Aggiungere libri alla libreria\n2.1 Prendere in prestito libri\n3. Restituire dei libri\n4. Verificare disponibilità di specifici libri\n5. Verificare libri nella libreria\n6. Verificare libri in prestito")
     scelta = int(input())
     match scelta:
         case 1:
@@ -32,6 +32,12 @@ while(continua=="si"):
             LibriPrestati(libriprestati)
         case _:
             print("Azione non prevista")
-    print("Vuoi eseguire una nuova azione? Inserisci si o no")
-    continua = input()
-    continua = continua.lower()
+    flag=False
+    continua=""
+    while(continua!="si" and continua!="no"):
+        if(flag):
+            print("Testo inserito non valido")
+        print("Vuoi eseguire una nuova azione? Inserisci si o no")
+        continua = input()
+        continua = continua.lower()
+        flag=True
